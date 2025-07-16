@@ -49,27 +49,27 @@ variable "validation_method" {
   }
 }
 
-variable "options" {
-  description = "Options for the ACM certificate, such as certificate transparency logging preference."
-  type        = map(string)
-  default = {
-    "certificate_transparency_logging_preference" = "ENABLED"
-  }
-  validation {
-    condition     = contains(keys(var.options), "certificate_transparency_logging_preference")
-    error_message = "Options must include 'certificate_transparency_logging_preference'."
-  }
-  validation {
-    condition     = var.options["certificate_transparency_logging_preference"] == "ENABLED" || var.options["certificate_transparency_logging_preference"] == "DISABLED"
-    error_message = "certificate_transparency_logging_preference must be either 'ENABLED' or 'DISABLED'."
-  }
-}
+# variable "options" {
+#   description = "Options for the ACM certificate, such as certificate transparency logging preference."
+#   type        = map(string)
+#   default = {
+#     "certificate_transparency_logging_preference" = "ENABLED"
+#   }
+#   validation {
+#     condition     = contains(keys(var.options), "certificate_transparency_logging_preference")
+#     error_message = "Options must include 'certificate_transparency_logging_preference'."
+#   }
+#   validation {
+#     condition     = var.options["certificate_transparency_logging_preference"] == "ENABLED" || var.options["certificate_transparency_logging_preference"] == "DISABLED"
+#     error_message = "certificate_transparency_logging_preference must be either 'ENABLED' or 'DISABLED'."
+#   }
+# }
 
-variable "validation_option" {
-  description = "A map of validation options for the certificate, such as DNS records."
-  type        = map(string)
-  default     = null
-}
+# variable "validation_option" {
+#   description = "A map of validation options for the certificate, such as DNS records."
+#   type        = map(string)
+#   default     = null
+# }
 
 variable "subject_alternative_names" {
   description = "A list of subject alternative names for the certificate."
