@@ -8,12 +8,6 @@
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.100.0 |
-
 ## Modules
 
 No modules.
@@ -36,6 +30,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_certificate_arn"></a> [certificate\_arn](#output\_certificate\_arn) | ARN of the ACM certificate |
-| <a name="output_validation_records"></a> [validation\_records](#output\_validation\_records) | List of validation records for the ACM certificate |
 | <a name="output_id"></a> [id](#output\_id) | ID of the ACM certificate validation |
+| <a name="output_validation_records"></a> [validation\_records](#output\_validation\_records) | List of validation records for the ACM certificate |
 <!-- END_TF_DOCS -->
